@@ -45,7 +45,12 @@ const Index = () => {
   return (
     <VStack spacing={4} p={5}>
       <Text fontSize="xl">Upload your file to S3</Text>
+      <Text fontSize="md">Single File Upload:</Text>
       <Input type="file" onChange={handleFileChange} />
+      <Text fontSize="md">Multiple Files Upload:</Text>
+      <Input type="file" multiple onChange={handleFileChange} />
+      <Text fontSize="md">Image Files Only:</Text>
+      <Input type="file" accept="image/*" onChange={handleFileChange} />
       <Button leftIcon={<FaUpload />} colorScheme="blue" onClick={handleUpload}>
         Upload
       </Button>
